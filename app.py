@@ -667,3 +667,25 @@ def seller_dashboard():
                 <button class="custom-button-secondary" style="margin-top: 15px;">Upload New Document</button>
             </div>
             """, unsafe_allow_html=True)
+def main():
+    # (Re-apply CSS in case Streamlit reload resets styling)
+    local_css()
+
+    # Build out the page
+    create_nav()
+    create_hero()
+    display_usp()
+    how_it_works()
+    features_section()
+    pricing_section()
+    savings_calculator()
+    testimonials_section()
+    about_section()
+    contact_form()
+    create_footer()
+
+    # If you want to preview the seller dashboard demo, uncomment this line:
+    # seller_dashboard()
+
+if __name__ == "__main__":
+    main()
