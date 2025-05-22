@@ -15,7 +15,7 @@ from io import BytesIO
 # Configure Streamlit
 st.set_page_config(
     page_title="RealEstateIreland.ie - Premium Property Sales Platform",
-    page_icon="🏠",
+    page_icon="RE",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -618,19 +618,19 @@ if not st.session_state.logged_in:
                 <h3 style='color: #1a2332; margin-bottom: 1rem;'>Buyer Protection Guarantee</h3>
                 <ul style='list-style: none; padding: 0;'>
                     <li style='margin-bottom: 0.5rem; color: #64748b;'>
-                        ✓ All deposits held in secure escrow accounts
+                        • All deposits held in secure escrow accounts
                     </li>
                     <li style='margin-bottom: 0.5rem; color: #64748b;'>
-                        ✓ Verified seller identities and property ownership
+                        • Verified seller identities and property ownership
                     </li>
                     <li style='margin-bottom: 0.5rem; color: #64748b;'>
-                        ✓ Legally binding purchase agreements
+                        • Legally binding purchase agreements
                     </li>
                     <li style='margin-bottom: 0.5rem; color: #64748b;'>
-                        ✓ Full transparency on all competing offers
+                        • Full transparency on all competing offers
                     </li>
                     <li style='margin-bottom: 0.5rem; color: #64748b;'>
-                        ✓ Professional legal support throughout
+                        • Professional legal support throughout
                     </li>
                 </ul>
             </div>
@@ -1271,7 +1271,7 @@ else:  # User is logged in
                         st.progress(0.0)
                 with col2:
                     if completed:
-                        st.markdown(f"**{stage}** ✓")
+                        st.markdown(f"**{stage}** [Completed]")
                     else:
                         st.markdown(f"{stage}")
             
@@ -1503,7 +1503,7 @@ else:  # User is logged in
                 st.markdown(f"**Account Type:** {st.session_state.user_type.title()}")
                 
                 if st.session_state.user.get('verified'):
-                    st.markdown("**Identity:** ✓ Verified")
+                    st.markdown("**Identity:** Verified")
                 else:
                     st.markdown("**Identity:** Pending Verification")
                     if st.button("Verify Identity", type="primary"):
@@ -1513,7 +1513,7 @@ else:  # User is logged in
                 
                 if st.session_state.user_type == 'buyer':
                     if st.session_state.user.get('finance_verified'):
-                        st.markdown("**Finance Status:** ✓ Pre-approved")
+                        st.markdown("**Finance Status:** Pre-approved")
                     else:
                         st.markdown("**Finance Status:** Not Verified")
                         if st.button("Verify Finances", type="primary"):
